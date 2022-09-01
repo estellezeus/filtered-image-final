@@ -42,7 +42,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       res.status(200).sendFile(img_filtered);
       console.log(img_filtered);
 
-    //Delete the final after it has been stored
+    //Delete the final after it has been stored                       
       res.on("finish", () => deleteLocalFiles([img_filtered]));
     }
 
